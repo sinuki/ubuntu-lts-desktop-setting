@@ -55,6 +55,15 @@ sudo apt install -y meld
 # filezilla
 sudo apt install -y filezilla
 
+# sublime-text
+if [ ! -f `which subl` ]
+then
+	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+	sudo apt install apt-transport-https
+	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+	sudo apt install sublime-text
+fi
+
 # eclipse-oxygen
 if [ ! -f "$CURRENT_PATH/eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz" ]
 then 
@@ -94,7 +103,7 @@ sudo add-apt-repository -y ppa:tista/adapta
 sudo apt install -y adapta-gtk-theme
 
 # easy-ssh
-if [ ! -d "$HOME/.eash-ssh" ]
+if [ ! -d "$HOME/.easy-ssh" ]
 then
 	mkdir "$HOME/.easy-ssh"
 	wget -O easy-ssh.zip https://github.com/sinuki/easy-ssh/archive/master.zip
@@ -103,7 +112,7 @@ fi
 
 # shell
 sudo apt install -y zsh
-chsh -s `which zsh`
+#chsh -s `which zsh`
 
 if [ ! -f "$HOME/.zshrc" ]
 then
