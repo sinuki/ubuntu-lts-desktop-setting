@@ -64,6 +64,14 @@ then
 	sudo apt install sublime-text
 fi
 
+# vscode
+if [ ! -f `which code` ]
+then
+	wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
+	sudo dpkg -i "$CURRENT_PATH/vscode.deb"
+	sudo apt install -f -y
+fi
+
 # eclipse-oxygen
 if [ ! -f "$CURRENT_PATH/eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz" ]
 then 
@@ -71,9 +79,9 @@ then
 fi
 
 # D2coding-font
-if [ ! -f "$CURRENT_PATH/master.zip" ]
+if [ 0 -eq `fc-list | grep D2 | wc -l` ]
 then
-	wget https://github.com/naver/d2codingfont/archive/master.zip
+	wget -O D2coding.zip https://github.com/naver/d2codingfont/archive/master.zip
 	unzip master.zip
 fi
 
@@ -112,7 +120,11 @@ fi
 
 # shell
 sudo apt install -y zsh
-#chsh -s `which zsh`
+
+if [ "/usr/bin/zsh" != "$SHELL" ]
+then
+	chsh -s `which zsh`
+fi
 
 if [ ! -f "$HOME/.zshrc" ]
 then
