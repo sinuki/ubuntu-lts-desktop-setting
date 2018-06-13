@@ -45,6 +45,7 @@ sudo apt install -y xpad
 
 # docker
 sudo apt install -y docker.io
+sudo usermod -aG docker $USER
 
 # paint - like a mspaint
 sudo apt install -y kolourpaint4
@@ -82,7 +83,7 @@ fi
 if [ 0 -eq `fc-list | grep D2 | wc -l` ]
 then
 	wget -O D2coding.zip https://github.com/naver/d2codingfont/archive/master.zip
-	unzip master.zip
+	unzip D2coding.zip
 fi
 
 # libreoffice
