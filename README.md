@@ -16,14 +16,14 @@ Ubuntu18.04LTS Desktop 초기 설정 스크립트
 6. gui firewall
 7. xpad - 윈도우즈의 sticky notes 같은 것 -
 8. docker
-9. paint - 윈도우즈의 그림판 같은 것 -
-10. file diff gui프로그램
+9. kolourpaint4 - 윈도우즈의 그림판 같은 것 -
+10. meld - file diff gui프로그램 -
 11. filezilla
 12. sublime-text3
 13. vscode
 14. eclipse-oxygen
 15. D2coding-font
-16. libreoffic
+16. libreoffice
 17. oracle-jdk8
 18. utils - htop, tree, openssh-server, git, glances -
 19. plank - dock프로그램 -
