@@ -22,10 +22,10 @@ Ubuntu18.04LTS Desktop 초기 설정 스크립트
 11. filezilla
 12. sublime-text3
 13. vscode
-14. eclipse-oxygen
+14. eclipse-photon
 15. D2coding-font
 16. libreoffice
-17. oracle-jdk8
+17. openjdk8
 18. utils - htop, tree, openssh-server, git, glances, nmap, googler, stacer -
 19. plank - dock프로그램 -
 20. theme - paper icon, adapta-gtk -
