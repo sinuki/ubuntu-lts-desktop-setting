@@ -74,10 +74,10 @@ then
 	$DEFAULT_COMMAND -f	
 fi
 
-# eclipse-oxygen
-if [ ! -f "$CURRENT_PATH/eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz" ]
+# eclipse-photon
+if [ ! -f "$CURRENT_PATH/eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz" ]
 then 
-	wget http://mirror.kakao.com/eclipse/technology/epp/downloads/release/oxygen/3a/eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz
+	wget http://mirror.kakao.com/eclipse/technology/epp/downloads/release/photon/R/eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz
 fi
 
 # D2coding-font
@@ -91,10 +91,8 @@ fi
 sudo add-apt-repository -y ppa:libreoffice/ppa
 $DEFAULT_COMMAND libreoffice
 
-# oracle jdk
-sudo add-apt-repository -y ppa:webupd8team/java
-$DEFAULT_COMMAND oracle-java8-installer
-$DEFAULT_COMMAND oracle-java8-unlimited-jce-policy
+# openjdk8
+$DEFAULT_COMMAND 'openjdk-8*'
 
 # utils
 $DEFAULT_COMMAND htop
@@ -105,7 +103,7 @@ $DEFAULT_COMMAND glances
 $DEFAULT_COMMAND nmap
 $DEFAULT_COMMAND googler
 
-# optimize gui tool
+# optimizer gui tool
 if [ ! -f `which stacer` ]
 then
 	sudo add-apt-repository ppa:oguzhaninan/stacer
@@ -115,10 +113,11 @@ fi
 # dock
 $DEFAULT_COMMAND plank
 
-# theme
+# icon-theme
 sudo add-apt-repository -y ppa:snwh/pulp
 $DEFAULT_COMMAND paper-icon-theme
 
+# theme
 sudo add-apt-repository -y ppa:tista/adapta
 $DEFAULT_COMMAND adapta-gtk-theme
 
