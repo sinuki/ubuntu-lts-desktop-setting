@@ -85,6 +85,18 @@ if [ 0 -eq `fc-list | grep D2 | wc -l` ]
 then
 	wget -O D2coding.zip https://github.com/naver/d2codingfont/archive/master.zip
 	unzip D2coding.zip
+	FONT_TEMP_PATH="./d2codingfont-master"
+	LATEST_FONT=$(ls $FONT_TEMP_PATH | grep D2Coding | sort -r | head -n 1)
+	unzip $FONT_TEMP_PATH/$LATEST_FONT -d $FONT_TEMP_PATH
+	chmod -R 755 $FONT_TEMP_PATH/*
+
+	FONT_TARGET_PATH="/usr/share/fonts/truetype/D2Coding"
+	sudo mkdir -p $FONT_TARGET_PATH
+	sudo cp $FONT_TEMP_PATH/D2CodingAll/* $FONT_TARGET_PATH/
+	sudo chown -R root:root $FONT_TARGET_PATH
+	fc-cache -f
+	rm -rf $FONT_TEMP_PATH
+	rm -rf D2coding.zip
 fi
 
 # libreoffice
@@ -98,10 +110,15 @@ $DEFAULT_COMMAND 'openjdk-8*'
 $DEFAULT_COMMAND htop
 $DEFAULT_COMMAND tree
 $DEFAULT_COMMAND openssh-server
-$DEFUALT_COMMAND git
 $DEFAULT_COMMAND glances
 $DEFAULT_COMMAND nmap
 $DEFAULT_COMMAND googler
+
+# git
+if [ ! -f `which git` ]
+then 
+	$DEFAULT_COMMAND git
+fi
 
 # optimizer gui tool
 if [ ! -f `which stacer` ]
