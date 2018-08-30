@@ -160,3 +160,6 @@ then
 fi
 
 sudo apt update
+
+# slack for Linux
+sudo snap install slack --classic
