@@ -141,9 +141,11 @@ $DEFAULT_COMMAND adapta-gtk-theme
 # easy-ssh
 if [ ! -d "$HOME/.easy-ssh" ]
 then
-	mkdir "$HOME/.easy-ssh"
 	wget -O easy-ssh.zip https://github.com/sinuki/easy-ssh/archive/master.zip
-	unzip easy-ssh.zip
+	unzip easy-ssh.zip -d "$HOME/.easy-ssh"
+	mv "$HOME/.easy-ssh/easy-ssh-master/easy-ssh" "$HOME/.easy-ssh/easy-ssh"
+	rm -rf "$HOME/.easy-ssh/easy-ssh-master"
+	rm -rf easy-ssh.zip
 fi
 
 # shell
