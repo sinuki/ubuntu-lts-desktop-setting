@@ -32,3 +32,4 @@ Ubuntu18.04LTS Desktop 초기 설정 스크립트
 21. easy-ssh - CLI기반의 간단한 ssh 랩퍼 스크립트 -
 22. zsh
 22. oh-my-zsh
+23. terminator - 윈도우즈의 mobaXTerm 같은 것 -

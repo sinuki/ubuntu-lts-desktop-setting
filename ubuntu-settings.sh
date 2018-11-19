@@ -161,4 +161,7 @@ then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
+# terminator -like a mobaXTerm
+$DEFAULT_COMMAND terminator
+
 sudo apt update
