@@ -57,27 +57,12 @@ $DEFAULT_COMMAND meld
 # filezilla
 $DEFAULT_COMMAND filezilla
 
-# sublime-text
-if [ ! -f `which subl` ]
-then
-	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-	$DEFAULT_COMMAND apt-transport-https
-	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-	$DEFAULT_COMMAND sublime-text
-fi
-
 # vscode
 if [ ! -f `which code` ]
 then
 	wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
 	sudo dpkg -i "$CURRENT_PATH/vscode.deb"
 	$DEFAULT_COMMAND -f	
-fi
-
-# eclipse-photon
-if [ ! -f "$CURRENT_PATH/eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz" ]
-then 
-	wget http://mirror.kakao.com/eclipse/technology/epp/downloads/release/photon/R/eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz
 fi
 
 # D2coding-font
@@ -160,6 +145,10 @@ if [ ! -f "$HOME/.zshrc" ]
 then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # terminator -like a mobaXTerm
 $DEFAULT_COMMAND terminator

@@ -20,16 +20,15 @@ Ubuntu18.04LTS Desktop 초기 설정 스크립트
 9. kolourpaint4 - 윈도우즈의 그림판 같은 것 -
 10. meld - file diff gui프로그램 -
 11. filezilla
-12. sublime-text3
-13. vscode
-14. eclipse-photon
-15. D2coding-font
-16. libreoffice
-17. openjdk8
-18. utils - htop, tree, openssh-server, git, glances, nmap, googler, stacer -
-19. plank - dock프로그램 -
-20. theme - paper icon, adapta-gtk -
-21. easy-ssh - CLI기반의 간단한 ssh 랩퍼 스크립트 -
-22. zsh
-22. oh-my-zsh
+12. vscode
+13. D2coding-font
+14. libreoffice
+15. openjdk8
+16. utils - htop, tree, openssh-server, git, glances, nmap, googler, stacer -
+17. plank - dock프로그램 -
+18. theme - paper icon, adapta-gtk -
+19. easy-ssh - CLI기반의 간단한 ssh 랩퍼 스크립트 -
+20. zsh
+21. oh-my-zsh
+22. fzf
 23. terminator - 윈도우즈의 mobaXTerm 같은 것 -
