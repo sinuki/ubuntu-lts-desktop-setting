@@ -1,5 +1,5 @@
-Ubuntu18.04LTS Desktop 초기 설정 스크립트
-==
+Ubuntu LTS Desktop 초기 설정 스크립트
+=
 
 - 해당 스크립트는 Ubuntu18.04LTS Desktop을 최소 설치하였을 경우를 전제로 합니다.
 - 본인에게 필요없는 항목은 스크립트에서 주석처리하거나 지우시면 됩니다.
@@ -8,27 +8,26 @@ Ubuntu18.04LTS Desktop 초기 설정 스크립트
 - backup & restore 스크립트를 추가하였습니다.(OS기동중인 상태에서  USER의 home폴더 삭제하고 복구 테스트했을 경우 성공했음)
 
 설치항목
---
-1. Ubuntu Default Dock 제거
-2. vim 설치 및 vim 설정
-3. gnome-tools
-4. net-tools
-5. media pack
-6. gui firewall
-7. xpad - 윈도우즈의 sticky notes 같은 것 -
-8. docker
-9. kolourpaint4 - 윈도우즈의 그림판 같은 것 -
-10. meld - file diff gui프로그램 -
-11. filezilla
-12. vscode
-13. D2coding-font
-14. libreoffice
-15. openjdk8
-16. utils - htop, tree, openssh-server, git, glances, nmap, googler, stacer -
-17. plank - dock프로그램 -
-18. theme - paper icon, adapta-gtk -
-19. easy-ssh - CLI기반의 간단한 ssh 랩퍼 스크립트 -
-20. zsh
-21. oh-my-zsh
-22. fzf
-23. terminator - 윈도우즈의 mobaXTerm 같은 것 -
+=
+
+- Ubuntu Default Dock 제거
+- vim 설치 및 vim 설정
+- gnome-tools
+- net-tools
+- media pack
+- gui firewall
+- xpad - 윈도우즈의 sticky notes 같은 것 -
+- docker
+- kolourpaint4 - 윈도우즈의 그림판 같은 것 -
+- meld - file diff gui프로그램 -
+- filezilla
+- vscode
+- D2coding-font
+- libreoffice
+- utils - htop, tree, openssh-server, git, glances, nmap, googler, stacer -
+- plank - dock프로그램 -
+- theme - paper icon, adapta-gtk -
+- zsh
+- oh-my-zsh
+- fzf
+- terminator - 윈도우즈의 mobaXTerm 같은 것 -

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Ubuntu 18.04LTS initial settings shell script
-# 
+# Ubuntu LTS initial settings shell script
+# - ubuntu version >= 18.04 
 # author : parksw
 # since  : 2018.06.13
 
@@ -88,9 +88,6 @@ fi
 sudo add-apt-repository -y ppa:libreoffice/ppa
 $DEFAULT_COMMAND libreoffice
 
-# openjdk8
-$DEFAULT_COMMAND 'openjdk-8*'
-
 # utils
 $DEFAULT_COMMAND htop
 $DEFAULT_COMMAND tree
@@ -123,16 +120,6 @@ $DEFAULT_COMMAND paper-icon-theme
 sudo add-apt-repository -y ppa:tista/adapta
 $DEFAULT_COMMAND adapta-gtk-theme
 
-# easy-ssh
-if [ ! -d "$HOME/.easy-ssh" ]
-then
-	wget -O easy-ssh.zip https://github.com/sinuki/easy-ssh/archive/master.zip
-	unzip easy-ssh.zip -d "$HOME/.easy-ssh"
-	mv "$HOME/.easy-ssh/easy-ssh-master/easy-ssh" "$HOME/.easy-ssh/easy-ssh"
-	rm -rf "$HOME/.easy-ssh/easy-ssh-master"
-	rm -rf easy-ssh.zip
-fi
-
 # shell
 $DEFAULT_COMMAND zsh
 
@@ -141,6 +128,7 @@ then
 	chsh -s `which zsh`
 fi
 
+# oh-my-zsh
 if [ ! -f "$HOME/.zshrc" ]
 then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -150,7 +138,5 @@ fi
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# terminator -like a mobaXTerm
+# terminator - like a mobaXTerm
 $DEFAULT_COMMAND terminator
-
-sudo apt update
